@@ -4,9 +4,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      // fontFamily: {
-      //   body: ["Vazir", ...fontFamily.sans],
-      // },
       fontFamily: {
         Vazir: "Vazir",
         VazirThin: "VazirThin",
@@ -45,7 +42,7 @@ export default {
         error: "#ff4757",
       },
       borderRadius: {
-        " radius-tiny": "3px",
+        "radius-tiny": "3px",
         "radius-sm": "5px",
         "radius-md": "7px",
         "radius-lg": "9px",
