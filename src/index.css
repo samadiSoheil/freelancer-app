@@ -22,5 +22,5 @@
 /* -------------------   STYLE CSS   -------------------- */
 
 body {
-  /* @apply bg-secondary-100; */
+  @apply w-full h-screen font-Vazir;
 }
