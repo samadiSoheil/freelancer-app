@@ -1,0 +1,8 @@
+/* -------------------   IMPORT FILES   --------------------------- */
+@import url(/public/style/reset.css);
+@import url(../public/style/fonts.css);
+
+/* -------------------   TAILWIND DIRECTIVES   -------------------- */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
