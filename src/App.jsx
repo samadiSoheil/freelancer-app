@@ -1,12 +1,14 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
+import Auth from "./pages/Auth";
 
 function App() {
   return (
-    <>
-      <div className="container h-64 bg-slate-100">
-        <h1 className="text-8xl font-Vazir">سلام</h1>
-      </div>
-    </>
+    <div className="container">
+      <Routes>
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+    </div>
   );
 }
 
