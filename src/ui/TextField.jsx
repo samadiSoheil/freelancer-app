@@ -1,7 +1,7 @@
 export default function TextFiled({ label, name, value, onChange }) {
   return (
     <div>
-      <label htmlFor={name} className="block mb-1">
+      <label htmlFor={name} className="block mb-4 font-VazirMedium">
         {label}
       </label>
       <input

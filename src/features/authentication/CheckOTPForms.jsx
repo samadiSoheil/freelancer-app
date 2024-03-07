@@ -21,6 +21,7 @@ export default function CheckOTPForms() {
             borderRadius: "0.5rem",
             backgroundColor: "white",
           }}
+          shouldAutoFocus={true}
         />
         <button className="btn btn--primery w-full">تایید</button>
       </form>
