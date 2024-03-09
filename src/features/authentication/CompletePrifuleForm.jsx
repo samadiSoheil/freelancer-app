@@ -1,9 +1,11 @@
 import { useState } from "react";
 import TextFiled from "../../ui/TextField";
+import RadioInput from "../../ui/RadioInput";
 
 export default function CompletePrifuleForm() {
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
+  const [role, setRole] = useState("FREELANCER");
 
   const handlerSubmitUser = (e) => {
     e.preventDefaulr();
@@ -29,26 +31,22 @@ export default function CompletePrifuleForm() {
             onChange={(e) => setUserEmail(e.target.value)}
           />
           <div className="w-full flex items-center gap-x-5">
-            <div className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="role"
-                id="OWNER"
-                value="OWNER"
-                className="size-4  form-radio text-primary-900 focus:ring-primary-900 transition-all duration-100 cursor-pointer"
-              />
-              <label htmlFor="OWNER">کارفرما</label>
-            </div>
-            <div className="flex items-center gap-2">
-              <input
-                type="radio"
-                name="role"
-                id="FREELANCER"
-                value="FREELANCER"
-                className="size-4 form-radio text-primary-900 focus:ring-primary-900 transition-all duration-100 cursor-pointer"
-              />
-              <label htmlFor="FREELANCER">فریلنسر</label>
-            </div>
+            <RadioInput
+              id="FREELANCER"
+              label="فریلنسر"
+              name="role"
+              value="FREELANCER"
+              isChecke={role === "FREELANCER"}
+              onChange={(e) => setRole(e.target.value)}
+            />
+            <RadioInput
+              id="OWNER"
+              label="کارفرما"
+              name="role"
+              value="OWNER"
+              isChecke={role === "OWNER"}
+              onChange={(e) => setRole(e.target.value)}
+            />
           </div>
           <div>
             <button type="submit" className="btn btn--primery w-full mt-3">
