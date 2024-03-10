@@ -7,7 +7,7 @@ export default function SendOTPForm({ setPhoneNumber, phoneNumber, sendOtp, isPe
       <TextFiled
         name="phoneNumber"
         label="شماره موبایل"
-        type="number"
+        type="text"
         value={phoneNumber}
         onChange={(e) => setPhoneNumber(e.target.value)}
       />

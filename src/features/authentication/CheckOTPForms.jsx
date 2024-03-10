@@ -19,12 +19,12 @@ export default function CheckOTPForms({ phoneNumber, onBack, reSendOtp }) {
     e.preventDefault();
     console.log(phoneNumber);
     try {
-      const { message, user } = await mutateAsync({ phoneNumber, otp });
+      const { message, user } = await mutateAsync({ phoneNumber: phoneNumber, otp });
       console.log(message);
       toast.success(message);
       if (user.isActive) {
       } else {
-        navigate("/complet-profile");
+        navigate("/complete-profile");
       }
     } catch (err) {
       console.log(err.response.data.message);

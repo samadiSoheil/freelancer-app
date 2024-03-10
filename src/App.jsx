@@ -14,7 +14,7 @@ function App() {
         <Toaster />
         <Routes>
           <Route path="/auth" element={<Auth />} />
-          <Route path="/complet-profile" element={<CompleteProfile />} />
+          <Route path="/complete-profile" element={<CompleteProfile />} />
         </Routes>
       </QueryClientProvider>
     </div>
