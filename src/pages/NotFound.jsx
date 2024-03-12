@@ -4,7 +4,7 @@ import useMoveBack from "../hooks/useMoveBack";
 export default function NotFound() {
   const moveBack = useMoveBack();
   return (
-    <>
+    <div className="container">
       <div className="w-full h-screen flex justify-center items-center text-slate-600">
         <div className="w-full h-screen flex flex-col justify-center items-center md:max-w-[660px] space-y-16">
           <div className="w-full flex justify-start ">
@@ -21,6 +21,6 @@ export default function NotFound() {
           </h1>
         </div>
       </div>
-    </>
+    </div>
   );
 }
