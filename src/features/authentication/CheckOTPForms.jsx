@@ -22,10 +22,15 @@ export default function CheckOTPForms({ phoneNumber, onBack, reSendOtp }) {
       const { message, user } = await mutateAsync({ phoneNumber: phoneNumber, otp });
       console.log(message);
       toast.success(message);
-      if (user.isActive) {
-      } else {
-        navigate("/complete-profile");
+      if (!user.isActive) return navigate("/complete-profile");
+      if (user.status !== 2) {
+        navigate("/");
+        toast("اکانت شما در انتظار تایید توسط پشتیبان سایت میباشد.\n", {
+          duration: 6000,
+        });
       }
+      // if (user.role == "FREELANCER") return navigate("/freelancer");
+      // if (user.role == "OWNER") return navigate("/owner");
     } catch (err) {
       console.log(err.response.data.message);
       toast.error(err?.response?.data?.message);
