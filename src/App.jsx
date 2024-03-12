@@ -6,22 +6,25 @@ import { Toaster } from "react-hot-toast";
 import CompleteProfile from "./pages/CompleteProfile";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import AppLayout from "./ui/AppLayout";
+import Owner from "./pages/Owner";
 
 function App() {
   const queryClient = new QueryClient();
 
   return (
-    <div className="container">
-      <QueryClientProvider client={queryClient}>
-        <Toaster />
-        <Routes>
-          <Route path="/auth" element={<Auth />} />
-          <Route path="/complete-profile" element={<CompleteProfile />} />
-          <Route path="/" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </QueryClientProvider>
-    </div>
+    <QueryClientProvider client={queryClient}>
+      <Toaster />
+      <Routes>
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/complete-profile" element={<CompleteProfile />} />
+        <Route element={<AppLayout />}>
+          <Route path="/owner" element={<Owner />} />
+        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </QueryClientProvider>
   );
 }
 
