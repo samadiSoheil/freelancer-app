@@ -11,3 +11,7 @@ export function checkOtp(data) {
 export function completeProfileFunc(data) {
   return http.post("/user/complete-profile", data).then((res) => res.data.data);
 }
+
+export function getUser(data) {
+  return http.get("/user/profile", data).then((res) => res.data.data);
+}
