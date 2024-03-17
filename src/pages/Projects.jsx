@@ -1,3 +1,9 @@
+import ProjectsTable from "../features/projects/ProjectsTable";
+
 export default function Projects() {
-  return <h1>this is projects</h1>;
+  return (
+    <>
+      <ProjectsTable />
+    </>
+  );
 }
