@@ -25,7 +25,7 @@ export default function AuthCountainer() {
       console.log(err);
       toast.error(err.message);
     }
-    setPhoneNumber("");
+    // setPhoneNumber("");
   };
 
   console.log(step);
@@ -37,7 +37,7 @@ export default function AuthCountainer() {
             isPending={isPending}
             sendOtp={senfOtpHandler}
             phoneNumber={phoneNumber}
-            setPhoneNumber={setPhoneNumber}
+            setPhoneNumber={(e) => setPhoneNumber(e.target.value)}
           />
         );
       case 2:

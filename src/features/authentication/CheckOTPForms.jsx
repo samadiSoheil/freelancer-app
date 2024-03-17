@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { HiArrowRight } from "react-icons/hi";
 import Loading from "../../ui/Loading";
-const RESEND_TIME = 10;
+const RESEND_TIME = 90;
 
 export default function CheckOTPForms({ phoneNumber, onBack, reSendOtp }) {
   const navigate = useNavigate();

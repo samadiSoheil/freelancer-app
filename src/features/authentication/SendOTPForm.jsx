@@ -9,7 +9,7 @@ export default function SendOTPForm({ setPhoneNumber, phoneNumber, sendOtp, isPe
         label="شماره موبایل"
         type="text"
         value={phoneNumber}
-        onChange={(e) => setPhoneNumber(e.target.value)}
+        onChange={setPhoneNumber}
       />
       <div>
         {isPending ? (
